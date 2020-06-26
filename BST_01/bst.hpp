@@ -32,6 +32,7 @@ public:
 
     BST();
     ~BST();
+    void DestroyRecursive(TreeNode *node);
     int getSize();
     bool isEmpty();
 
