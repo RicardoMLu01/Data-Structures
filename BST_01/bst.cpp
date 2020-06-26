@@ -21,7 +21,17 @@ BST::BST()
 
 BST::~BST()
 {
+    DestroyRecursive(root);
+}
 
+void BST::DestroyRecursive(TreeNode *node)
+{
+    if(node)
+    {
+        DestroyRecursive(node->left);
+        DestroyRecursive(node->right);
+        delete node;
+    }
 }
 
 int BST::getSize()
